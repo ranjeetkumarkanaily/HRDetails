@@ -1,0 +1,27 @@
+<h1>Listing hr_masters</h1>
+
+<table>
+  <tr>
+    <th>Hr tables column</th>
+    <th>Value</th>
+    <th>Employee</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hr_masters.each do |hr_master| %>
+  <tr>
+    <td><%= hr_master.hr_tables_column %></td>
+    <td><%= hr_master.value %></td>
+    <td><%= hr_master.employee_id %></td>
+    <td><%= link_to 'Show', hr_master %></td>
+    <td><%= link_to 'Edit', edit_hr_master_path(hr_master) %></td>
+    <td><%= link_to 'Destroy', hr_master, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hr master', new_hr_master_path %>

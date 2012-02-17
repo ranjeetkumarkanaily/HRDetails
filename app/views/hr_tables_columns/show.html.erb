@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hr table:</b>
+  <%= @hr_tables_column.hr_table %>
+</p>
+
+<p>
+  <b>Column name:</b>
+  <%= @hr_tables_column.column_name %>
+</p>
+
+<p>
+  <b>Data type:</b>
+  <%= @hr_tables_column.data_type %>
+</p>
+
+<p>
+  <b>Required:</b>
+  <%= @hr_tables_column.required %>
+</p>
+
+
+<%= link_to 'Edit', edit_hr_tables_column_path(@hr_tables_column) %> |
+<%= link_to 'Back', hr_tables_columns_path %>

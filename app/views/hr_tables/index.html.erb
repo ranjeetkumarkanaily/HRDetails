@@ -1,0 +1,23 @@
+<h1>Listing hr_tables</h1>
+
+<table>
+  <tr>
+    <th>Table name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hr_tables.each do |hr_table| %>
+  <tr>
+    <td><%= hr_table.table_name %></td>
+    <td><%= link_to 'Show', hr_table %></td>
+    <td><%= link_to 'Edit', edit_hr_table_path(hr_table) %></td>
+    <td><%= link_to 'Destroy', hr_table, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hr table', new_hr_table_path %>

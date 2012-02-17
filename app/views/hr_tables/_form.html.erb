@@ -1,0 +1,21 @@
+<%= form_for(@hr_table) do |f| %>
+  <% if @hr_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hr_table.errors.count, "error") %> prohibited this hr_table from being saved:</h2>
+
+      <ul>
+      <% @hr_table.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :table_name %><br />
+    <%= f.text_field :table_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

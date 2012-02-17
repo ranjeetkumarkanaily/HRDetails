@@ -1,0 +1,29 @@
+<h1>Listing hr_tables_columns</h1>
+
+<table>
+  <tr>
+    <th>Hr table</th>
+    <th>Column name</th>
+    <th>Data type</th>
+    <th>Required</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hr_tables_columns.each do |hr_tables_column| %>
+  <tr>
+    <td><%= hr_tables_column.hr_table %></td>
+    <td><%= hr_tables_column.column_name %></td>
+    <td><%= hr_tables_column.data_type %></td>
+    <td><%= hr_tables_column.required %></td>
+    <td><%= link_to 'Show', hr_tables_column %></td>
+    <td><%= link_to 'Edit', edit_hr_tables_column_path(hr_tables_column) %></td>
+    <td><%= link_to 'Destroy', hr_tables_column, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hr tables column', new_hr_tables_column_path %>

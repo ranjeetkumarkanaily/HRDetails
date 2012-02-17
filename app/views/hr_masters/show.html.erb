@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hr tables column:</b>
+  <%= @hr_master.hr_tables_column %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @hr_master.value %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @hr_master.employee_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_hr_master_path(@hr_master) %> |
+<%= link_to 'Back', hr_masters_path %>

@@ -1,0 +1,2 @@
+module HrTablesColumnsHelper
+end
